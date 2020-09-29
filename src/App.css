@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+#root {
+  margin: 0;
+  padding: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.questions-list {
+  padding: 20px;
+  overflow: hidden;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  box-shadow: 8px 8px 4px #808080;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.card {
+  padding: 20px;
+  overflow: hidden;
+}
+
+.MuiButtonBase-root:disabled {
+  cursor: not-allowed;
+  pointer-events: auto;
+}
+.editor {
+  /* padding-left: 16px; */
+  width: 90%;
+  margin-bottom: 2rem;
+}
+
+.edit-title {
+  padding-left: 1rem;
+}
+
+@media (max-width: 959px) {
+  .editor {
+    width: 100%;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.labels {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.answers {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 1rem 1rem;
+}
+.form {
+  border: 1px solid grey;
+  border-radius: 4px;
+  box-shadow: 8px 8px 4px #808080;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 4rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 500px) {
+  .answers {
+    /* width: 100%; */
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
-  to {
-    transform: rotate(360deg);
+  .labels {
+    width: 100%;
+    margin-left: 0;
   }
 }
